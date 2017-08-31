@@ -1,7 +1,7 @@
 <template>
   <section class="container has-text-centered">
     <div class="main_content">
-      <h1 class="title">
+      <h1 class="main-title">
         Chatyard
       </h1>
       <h2 class="subtext">
@@ -217,7 +217,7 @@ export default {
 }
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped >
-
+  @import "~assets/css/variables.scss";
 
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     text-align: center;
@@ -240,154 +240,163 @@ export default {
     font-weight: 300;
   }
 
+  h1 {
+    font-size: 51px;
+    font-weight: 500;
+  }
+
+  h2 {
+    color: $black;
+  }
 
   .container {
-  padding-bottom: 5rem;
-}
-
-.main_content {
-  padding-top: 4rem;
-}
-
-.title {
-  margin-top: 5rem;
-  font-size: 4rem;
-  color: #E16262;
-}
-
-.subtext {
-  margin-top: 1.5rem;
-  font-size: 2.25rem;
-  font-weight: 300;
-}
-.disclaimer {
-  margin-top: 5rem;
-}
-
-.input_wrap {
-
-  width: 55%;
-  margin: 0 auto;
-  margin-top: 2rem;
-  .input_name {
-    width: 100%;
-    height: 50px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
+    padding-bottom: 5rem;
   }
-}
-.start_button {
-  margin-top: 2rem;
-  font-size: 1rem;
-  background-color: #E16262;
-  color: white;
-  border-radius: 100px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  height: 40px;
-}
 
-.featured_chat {
-  margin-top: 10rem;
-  h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
+  .main_content {
+    padding-top: 4rem;
   }
-  .content_wrap {
-    .image {
-      min-height: 255px;
-      background-color: black;
-    }
-  }
-  .detail_info_wrap {
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    .join_button {
-      .button {
-        border-radius: 10px;
-      }
+  .main-title {
+    margin-top: 3.5rem;
+    color: $red;
+  }
 
-    }
+  .subtext {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 300;
   }
-  .view_all_button {
-    margin-top: 2rem;
-    height: 40px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    color: white;
-    background-color: #E16262;
-    border-radius: 100px;
-    border: 0;
-    font-size: 1rem;
+  .disclaimer {
+    margin-top: 5rem;
+    font-size: 12px;
   }
-}
-.trending_chat {
-  margin-top: 10rem;
-  .columns {
-    .column {
-      padding-left: 4rem;
-      padding-right: 4rem;
-    }
-  }
-  h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-  }
-  .red_underline {
-    height: 4px;
-    border-top: 2px solid #E16262;
-    width: 15%;
+
+  .input_wrap {
+
+    width: 55%;
     margin: 0 auto;
-    margin-bottom: 3rem;
-  }
-  .chat_item_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    border-top: 1px solid grey;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .chat_item_wrap:last-child {
-    border-bottom: 1px solid grey;
-  }
-  .chat_detail_wrap {
-    display: flex;
-  }
-  .chat_view_num {
-    width: 75px;
-    display: flex;
-    flex: 0 0 auto;
-  }
-  .chat_join_button {
-    display: flex;
-    flex: 0 0 auto;
-  }
-  .join_button_grey {
-    background-color: grey;
-    width: 50px;
-    border-radius: 5px;
-    border: 0;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    text-align: center;
-  }
-  .view_all_trending {
     margin-top: 2rem;
-    height: 40px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    color: white;
-    background-color: #E16262;
-    border-radius: 100px;
-    border: 0;
-    font-size: 1rem;
+    .input_name {
+      width: 100%;
+      height: 50px;
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+    }
   }
-}
+  .start_button {
+    margin-top: 2rem;
+    font-size: 1rem;
+    background-color: $red;
+    color: white;
+    border-radius: 100px;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    height: $main-button-height;
+  }
+
+  .featured_chat {
+    margin-top: 10rem;
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    .content_wrap {
+      .image {
+        min-height: 255px;
+        background-color: black;
+      }
+    }
+    .detail_info_wrap {
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .join_button {
+        .button {
+          border-radius: 10px;
+        }
+
+      }
+    }
+    .view_all_button {
+      margin-top: 2rem;
+      height: 40px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      color: white;
+      background-color: $red;
+      border-radius: 100px;
+      border: 0;
+      font-size: 1rem;
+    }
+  }
+  .trending_chat {
+    margin-top: 10rem;
+    .columns {
+      .column {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+    }
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    .red_underline {
+      height: 4px;
+      border-top: 2px solid $red;
+      width: 15%;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+    .chat_item_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      border-top: 1px solid $bar-lightgrey;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .chat_item_wrap:last-child {
+      border-bottom: 1px solid $bar-lightgrey;
+    }
+    .chat_detail_wrap {
+      display: flex;
+    }
+    .chat_view_num {
+      width: 75px;
+      display: flex;
+      flex: 0 0 auto;
+    }
+    .chat_join_button {
+      display: flex;
+      flex: 0 0 auto;
+    }
+    .join_button_grey {
+      background-color: $button-grey;
+      color: $button-grey-text;
+      width: 50px;
+      border-radius: 5px;
+      border: 0;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      text-align: center;
+    }
+    .view_all_trending {
+      margin-top: 2rem;
+      height: 40px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      color: white;
+      background-color: #ff585b;
+      border-radius: 100px;
+      border: 0;
+      font-size: 1rem;
+    }
+  }
 
 </style>

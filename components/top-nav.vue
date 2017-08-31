@@ -2,41 +2,38 @@
   <div class="top-nav full-width">
     <div class="nav-content">
       <div class="nav-item-group">
-        <div class="nav-item-wrap">
+        <a class="nav-item-wrap">
           <div class="nav-icon">
-
-            <h4><i class="fa fa-fire" aria-hidden="true"></i></h4>
-
-            <!--<img src="/" alt="fire" />-->
+            <img src="/images/DesktopImages/chat-trending.png" alt="fire" />
           </div>
           <div class="nav-text">
             <h4>TRENDING</h4>
           </div>
-        </div>
-        <div class="nav-item-wrap">
+        </a>
+        <a class="nav-item-wrap">
           <div class="nav-icon">
-            <h4><i class="fa fa-star" aria-hidden="true"></i></h4>
+            <img src="/images/DesktopImages/chat-mostpopular.png" alt="popular" />
           </div>
           <div class="nav-text">
             <h4>MOST POPULAR</h4>
           </div>
-        </div>
-        <div class="nav-item-wrap">
+        </a>
+        <a class="nav-item-wrap">
           <div class="nav-icon">
-            <h4><i class="fa fa-heart" aria-hidden="true"></i></h4>
+            <img src="/images/DesktopImages/chat-mostloved.png" alt="loved" />
           </div>
           <div class="nav-text">
             <h4>MOST LOVED</h4>
           </div>
-        </div>
-        <div class="nav-item-wrap">
+        </a>
+        <a class="nav-item-wrap">
           <div class="nav-icon">
-            <h4><i class="fa fa-gift" aria-hidden="true"></i></h4>
+            <img src="/images/DesktopImages/chat-latest.png" alt="latest" />
           </div>
           <div class="nav-text">
             <h4>LATEST</h4>
           </div>
-        </div>
+        </a>
       </div>
       <div class="nav-right">
         <div class="login">
@@ -57,7 +54,11 @@
   }
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped>
+  @import "~assets/css/variables.scss";
 
+  h4 {
+    color: $black;
+  }
   .top-nav {
     width: 100%;
     height: 50px;
@@ -76,11 +77,16 @@
         align-items: center;
         .nav-item-wrap {
           display: flex;
+          align-items: center;
           .nav-text {
-            margin-left: 0.5rem;
+            margin-left: 0.25rem;
             margin-right: 1rem;
           }
         }
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
       }
     }
   }
