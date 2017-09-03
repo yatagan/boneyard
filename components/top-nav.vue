@@ -1,6 +1,6 @@
 <template>
-  <div class="top-nav full-width">
-    <div class="nav-content">
+  <div class="top-nav">
+    <div class="nav-content container">
       <div class="nav-item-group">
         <a class="nav-item-wrap">
           <div class="nav-icon">
@@ -67,8 +67,6 @@
     justify-content: space-between;
     border-bottom: 1px solid black;
     .nav-content {
-      width: 1050px;
-      margin: 0 auto;
       display: flex;
       padding-left: 1rem;
       padding-right: 1rem;
