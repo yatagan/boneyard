@@ -217,7 +217,7 @@
       </button>
     </div>
 
-    <div class="social_media footer">
+    <div class="social_media">
       <div class="columns social_columns">
         <div class="column about">
           <h3>ABOUT CHATYARD</h3>
