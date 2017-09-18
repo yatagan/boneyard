@@ -39,5 +39,7 @@ module.exports = {
         })
       }
     }*/
-  }
+  },
+
+  mode: 'spa'
 }

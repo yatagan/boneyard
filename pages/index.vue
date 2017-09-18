@@ -15,66 +15,17 @@
       </div>
       <button class="button is-medium start_button">GET STARTED</button>
     </div>
+
     <div class="featured_chat">
       <h2><strong>Featured</strong> Chatrooms</h2>
 
       <div class="columns is-gapless">
-        <div class="column is-4">
-          <div class="content_wrap">
-            <div class="image">
-              <img src="/images/football-american-game-runner.jpg" alt="football" />
-            </div>
-            <div class="detail_info_wrap">
-              <div class="hashtag">
-                <span>#Sports</span>
-              </div>
-              <div class="view_num join_button">
-                <div class="view_count">
-                  <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                  <span>27,000</span>
-                </div>
-                <button class="button join_button_grey is-outlined is-small">Join</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="content_wrap">
-            <div class="image">
-              <img src="/images/Zoro-The-Drummer.jpg" alt="drummer" />
-            </div>
-            <div class="detail_info_wrap">
-              <div class="hashtag">
-                <span>#Music</span>
-              </div>
-              <div class="view_num join_button">
-                <div class="view_count">
-                  <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                  <span>15,700</span>
-                </div>
-                <button class="button join_button_grey is-outlined is-small">Join</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="content_wrap">
-            <div class="image">
-              <img src="/images/download.jpg" alt="microchip" />
-            </div>
-            <div class="detail_info_wrap">
-              <div class="hashtag">
-                <span>#Electronics</span>
-              </div>
-              <div class="view_num join_button">
-                <div class="view_count">
-                  <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                  <span>27,000</span>
-                </div>
-                <button class="button join_button_grey is-outlined is-small">Join</button>
-              </div>
-            </div>
-          </div>
+        <div v-for="item in featured" class="column is-4">
+          <featured-chat-item
+            :key="item.id"
+            :name="item.name"
+            :users-number="item.usersNumber"
+            :image="item.image"></featured-chat-item>
         </div>
       </div>
 
@@ -91,124 +42,22 @@
 
       <div class="columns">
         <div class="column is-6">
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #FriendsForever
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>27,246</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
 
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #SoccerLovers
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>12,888</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #TravelLovers
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>33,465</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #Singles
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>12,444</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-          </div>
+          <trending-chat-item
+            v-for="item in trendingLeft"
+            :key="item.id"
+            :name="item.name"
+            :users-number="item.usersNumber"></trending-chat-item>
 
         </div>
         <div class="column is-6">
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #BieberFans
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>46,246</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #TrumpFever
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>184,754</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #FriendsFanClub
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>1,000,465</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-          </div>
-          <div class="chat_item_wrap">
-            <div class="chat_hash">
-              #WWESummerSlam
-            </div>
-            <div class="chat_detail_wrap">
-              <div class="chat_view_num">
-                <img src="/images/DesktopImages/green-ball.png" alt="green ball" />
-                <span>4,544</span>
-              </div>
-              <div class="chat_join_button">
-                <button class="button is-small join_button_grey">Join</button>
-              </div>
-            </div>
-          </div>
+
+          <trending-chat-item
+            v-for="item in trendingRight"
+            :key="item.id"
+            :name="item.name"
+            :users-number="item.usersNumber"></trending-chat-item>
+
         </div>
       </div>
 
@@ -257,13 +106,86 @@
   </section>
 </template>
 <script>
+import _ from 'lodash'
+import axios from 'axios'
+
 import Logo from '~/components/Logo.vue'
+//import socket from '~/components/socket.js'
+
+import FeaturedChatItem from '~/components/FeaturedChatItem.vue'
+import TrendingChatItem from '~/components/TrendingChatItem.vue'
+
 
 export default {
   components: {
-    Logo
+    Logo,
+    FeaturedChatItem,
+    TrendingChatItem
+  },
+  data: function () {
+    return {
+      chatrooms: [],
+      trending: []
+    }
+  },
+  computed: {
+    featured: function () {
+      let num = 3;
+      return _.take(this.chatrooms, num);
+    },
+    trendingLeft: function () {
+      let length = this.trending.length;
+      let numLeft = _.ceil(length / 2);
+      return _.take(this.trending, numLeft);
+    },
+    trendingRight: function () {
+      let length = this.trending.length;
+      let numLeft = _.ceil(length / 2);
+      let nubRight = length - numLeft;
+      return _.takeRight(this.trending, nubRight);
+    }
+  },
+  beforeMount: function () {
+    this.loadChatrooms();
+  },
+  methods: {
+    loadChatrooms: function () {
+      var vm = this;
+      axios.get('api/chatrooms')
+        .then(function(resp) {
+          if (typeof resp.data === 'object') {
+            vm.chatrooms = resp.data;
+          }
+          else {
+            throw 'Invalid response';
+          }
+        })
+        .catch(function (error) {
+          vm.loadDummyChatrooms();
+          console.warn('Loaded dummy data');
+        });
+    },
+    loadDummyChatrooms: function () {
+      this.chatrooms = [
+        {name: 'Sports', usersNumber: 27000, image: '/images/football-american-game-runner.jpg'},
+        {name: 'Music', usersNumber: 15700, image: '/images/Zoro-The-Drummer.jpg'},
+        {name: 'Electronics', usersNumber: 27000, image: '/images/download.jpg'},
+      ];
+      this.trending = [
+        {name: 'FriendsForever', usersNumber: 27246},
+        {name: 'SoccerLovers', usersNumber: 12888},
+        {name: 'TravelLovers', usersNumber: 33465},
+        {name: 'Singles', usersNumber: 12444},
+
+        {name: 'BieberFans', usersNumber: 46246},
+        {name: 'TrumpFever', usersNumber: 184754},
+        {name: 'FriendsFanClub', usersNumber: 1000465},
+        {name: 'WWESummerSlam', usersNumber: 4544},
+      ];
+    }
   }
 }
+
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped >
   @import "~assets/css/variables.scss";
@@ -356,59 +278,6 @@ export default {
       font-size: 2.25rem;
       margin-bottom: 1rem;
     }
-    .content_wrap {
-      .image {
-        height: 250px;
-        background-color: black;
-        img {
-          height: 100%
-        }
-      }
-    }
-    .detail_info_wrap {
-      height: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      .hashtag {
-        span {
-          font-size: 1.25rem;
-          font-weight: 700;
-
-        }
-      }
-      .view_num {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 50%;
-        .view_count {
-          display: flex;
-          align-items: center;
-          span {
-            font-size: 1.25rem;
-            font-weight: 500;
-            padding-left: 0.5rem;
-          }
-        }
-      }
-
-      .join_button {
-        .join_button_grey {
-          background-color: $button-grey;
-          color: $button-grey-text;
-          width: 50px;
-          border-radius: 5px;
-          border: 0;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          text-align: center;
-        }
-
-      }
-    }
     .view_all_button {
       margin-top: 2rem;
       height: $main-button-height;
@@ -422,6 +291,7 @@ export default {
       cursor: pointer;
     }
   }
+
   .trending_chat {
     margin-top: 10rem;
     .columns {
@@ -440,48 +310,6 @@ export default {
       width: 15%;
       margin: 0 auto;
       margin-bottom: 3rem;
-    }
-    .chat_item_wrap {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 50px;
-      border-top: 1px solid $bar-lightgrey;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      .chat_hash {
-        font-size: 1.25rem;
-        font-weight: 700;
-      }
-    }
-    .chat_item_wrap:last-child {
-      border-bottom: 1px solid $bar-lightgrey;
-    }
-    .chat_detail_wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 45%;
-      .chat_view_num {
-        display: flex;
-        align-items: center;
-        span {
-          font-size: 1.25rem;
-          font-weight: 500;
-          padding-left: 0.5rem;
-        }
-      }
-    }
-    .join_button_grey {
-      background-color: $button-grey;
-      color: $button-grey-text;
-      width: 50px;
-      border-radius: 5px;
-      border: 0;
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem;
-      text-align: center;
-      font-weight: 500;
     }
     .view_all_trending {
       margin-top: 2rem;

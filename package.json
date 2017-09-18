@@ -14,7 +14,11 @@
     "sass": "node-sass sass/ -o build/css/"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "bulma": "^0.5.1",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment-timezone": "^0.5.13",
     "node-sass": "^4.5.3",
     "nuxt": "^1.0.0-rc3"
   },
@@ -29,7 +33,9 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "phoenix": "phoenixframework/phoenix#v1.2.1",
+    "phoenix_html": "phoenixframework/phoenix_html#v2.7.0"
   },
   "watches": {
     "sass": "sass/**"
